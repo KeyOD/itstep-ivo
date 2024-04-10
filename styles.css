@@ -1,0 +1,56 @@
+body{
+    background-color: #050016;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* temp style */
+.logo{
+    font-size: 1.5rem;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
+.menu-item{
+    display: flex;
+}
+.menu a{
+    list-style: none;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+
+.exercise{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    background: linear-gradient(
+        125deg,
+        #0e003b 50%,
+        #ffffff 50% 55%,
+        #0e003b 55%
+    );
+    background-size: 250%;
+    background-position: 0;
+    transition: background 0.5s;
+    &:hover{
+        background-position: 100%;
+        transition: background 0.5s;
+    }
+}
