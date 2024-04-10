@@ -1,0 +1,91 @@
+body {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(90deg, #007bff, #d0314c);
+    color: #fff;
+    transform: translate(0%, 50%);
+}
+
+.form-wrapper {
+    background-color: white;
+    color: #222;
+    padding: 15px 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #616161;
+    margin-inline: -40px;
+}
+
+form {
+    display: grid;
+    place-items: center;
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+form div {
+    position: relative;
+    margin-block: 10px;
+}
+
+form label {
+    position: absolute;
+    inset: 0;
+    color: #222;
+    pointer-events: none;
+    transition: top 0.3s;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid #979797;
+    transition: border-bottom 0.3s;
+
+}
+
+form input:focus ~ label,
+form input:hover ~ label,
+form input:valid ~ label {
+    top: -25px;
+    transition: top 0.3s;
+}
+
+form input:focus ~ label::after,
+form input:hover ~ label::after,
+form input:valid ~ label::after {
+    content: ':'
+}
+
+form input:focus,
+form input:hover {
+    outline: none;
+    border-bottom: 1px solid #222;  
+    transition: border-bottom 0.3s;
+}
+
+[type="submit"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #007bff 50%, #d0314c 50%);
+    background-size: 200%;
+    background-position: 0%;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-position 0.3s;
+}
+
+[type="submit"]:hover,
+[type="submit"]:focus {
+    background-position: 100%;
+    border: none;
+    transition: background-position 0.3s;
+}

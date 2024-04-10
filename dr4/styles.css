@@ -1,0 +1,80 @@
+body{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 40vh;
+    margin: 0;
+    background-color: rgb(63, 0, 63);
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.grid-wrapper{
+    height: 120px;
+    aspect-ratio: 5 / 1;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    'bliska-chuka botev ruj musala'
+    'milevets milevets ruj gorcev'
+    'radomir radomir cherni gorcev'
+    'radomir radomir vihren vihren'
+    ;
+}
+.bliska-chuka{
+    grid-area: bliska-chuka;
+}
+.botev{
+    grid-area: botev;
+}
+.cherni{
+    grid-area: cherni;
+}
+.gorcev{
+    grid-area: gorcev;
+}
+.milevets{
+    grid-area: milevets;
+}
+.musala{
+    grid-area: musala;
+}
+.radomir{
+    grid-area: radomir;
+}
+.ruj{
+    grid-area: ruj;
+}
+.vihren{
+    grid-area: vihren;
+}
+div:not(.grid-wrapper){
+    position: relative;
+
+}
+p{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+div:not(.grid-wrapper):hover p{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+h1{
+    margin: 0;
+    color:white;
+    margin-bottom: -200px;
+}

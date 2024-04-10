@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Сайт с таблица</title>
+  </head>
+
+  <body>
+    <table cellpadding="5" cellspacing="5"
+    >
+      <tr>
+        <th rowspan="3" class="day-text">Ден</th>
+        <th colspan="3">Уроци</th>
+      </tr>
+      <tr>
+        <th colspan="2">Часове</th>
+        <th rowspan="2">Тема</th>
+      </tr>
+
+      <tr>
+        <th>Начало</th>
+        <th>Край</th>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Понеделник</td>
+        <td rowspan="2" class="orange">8:00</td>
+        <td rowspan="2" class="blue">17:00</td>
+        <td>Интрудукция към HTML</td>
+      </tr>
+
+      <tr>
+        <td>Елементи от HTML</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3">Вторник</td>
+        <td class="orange">8:00</td>
+        <td class="orange">11:00</td>
+        <td>Атрибути в HTML</td>
+      </tr>
+
+      <tr>
+        <td class="orange">11:30</td>
+        <td class="green">14:00</td>
+        <td rowspan="2">По-сложни атрибути</td>
+      </tr>
+
+      <tr>
+        <td class="green">14:30</td>
+        <td class="blue">17:00</td>
+      </tr>
+
+      <tr>
+        <td>Сряда</td>
+        <td class="orange">8:00</td>
+        <td class="green">14:00</td>
+        <td>Интродукция към CSS</td>
+      </tr>
+    </table>
+  </body>
+</html>
