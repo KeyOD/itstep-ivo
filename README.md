@@ -1,2 +1,2 @@
-# itstep-ivo
+# ITStep-Ivo
 IT Step exercises
