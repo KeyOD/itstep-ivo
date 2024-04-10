@@ -5,16 +5,22 @@ body{
     margin: 0 auto;
 }
 
+h1{
+    text-align: center;
+}
+
 /* temp style */
 .logo{
     font-size: 1.5rem;
 }
 
-
 .menu{
     display: flex;
     justify-content: space-between;
     position: sticky;
+    top: 0;
+    background-color: #050016;
+    padding-block: 10px;
 }
 .menu-item{
     display: flex;
@@ -33,6 +39,7 @@ body{
 .exercise{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .button{
