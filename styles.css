@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #050016;
     color: white;
@@ -21,25 +25,28 @@ h1{
     top: 0;
     background-color: #050016;
     padding-block: 10px;
-}
-.menu-item{
-    display: flex;
-}
-.menu a{
-    list-style: none;
-    margin-right: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-.menu a:hover{
-    text-decoration: underline;
+
+    a:not(.logo) {
+        list-style: none;
+        margin-right: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .logo{
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .exercise{
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    scroll-margin-top: 50px;
 }
 
 .button{
