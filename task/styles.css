@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container styles */
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Heading styles */
+h2 {
+  text-align: center;
+}
+
+/* List styles */
+ul {
+  list-style-type: none;
+}
+
+/* List item styles */
+li {
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-bottom: 5px;
+}
