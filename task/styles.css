@@ -18,6 +18,8 @@ h2 {
 /* List styles */
 ul {
   list-style-type: none;
+
+  margin-top: 20px;
 }
 
 /* List item styles */
@@ -25,4 +27,20 @@ li {
   padding: 10px;
   background-color: #f0f0f0;
   margin-bottom: 5px;
+
+  &:nth-child(odd) {
+    background-color: #e0e0e0;
+  }
+  &:hover {
+    background-color: #e6e6e6;
+  }
+  &::first-letter{
+    font-size: 150%;
+  }
+  &::before{
+    content: "•"
+  }
+  &::after{
+    content: " (click me)"
+  }
 }
