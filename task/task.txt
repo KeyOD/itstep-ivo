@@ -1,0 +1,12 @@
+Task Title: CSS Pseudo-class and Pseudo-element Challenge
+
+Task Description:
+Your task is to enhance the provided HTML/CSS code to achieve specific styling effects using pseudo-classes and pseudo-elements. Follow the instructions below:
+
+Center the heading "List of Items" (<h2>).
+Separate the list from the heading by adding a margin-top of 20 pixels to the <ul> element.
+Style every other list item with a slightly darker background color. Use the :nth-child(odd) pseudo-class for this.
+Add a hover effect to list items. When hovered over, change the background color to #e6e6e6. Use the :hover pseudo-class for this.
+Increase the font size of the first letter of each list item to 150%. Utilize the ::first-letter pseudo-element for this.
+Add a bullet (•) before each list item. Use the ::before pseudo-element for this.
+Add " (click me)" after each list item. Use the ::after pseudo-element for this.
