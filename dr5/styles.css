@@ -1,0 +1,46 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #050016;
+}
+
+.wrapper{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.sun{
+    position: absolute;
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gold;
+}
+.moon{
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: move 5s infinite alternate;
+    background-color: #050016;
+}
+
+@keyframes move{
+    0%{
+        transform: translate(-30px, -30px);
+        box-shadow: 9px 9px 5px 0px gold;
+    }
+    50%{
+        transform: translate(0, 0);
+        box-shadow: 0 0 10px 5px gold;
+    }
+    100%{
+        transform: translate(30px, 30px);
+        box-shadow: -9px -9px 5px 0px gold;
+    }
+}
