@@ -4,48 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
-    <title>Задачи на ITStep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
 </head>
 <body>
     <div class="menu">
-        <a href="#" class="logo">[Insert Logo Here]</a>
+        <a href="#" class="logo">
+            <img src="site-logo.svg" alt="Лого">
+        </a>
         <div class="items">
-            <a href="#form">Форма за регистрация</a>
-            <a href="#table">Сайт с таблица</a>
-            <a href="#masonary">Върховете на България</a>
+            <a href="#about-me">За мен</a>
+            <a href="#projects">Мойте проекти</a>
+            <a href="#contact-me">Свържете се с мен</a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </div>
-    <div class="main-content">
-        <h1>Задачи зададени от ITStep направени от Ивелин</h1>
+    <div class="main-content" id="about-me">
+        <div class="my-img">
+            <img src="user.jpg" alt="Агент Агентов">
+        </div>
+        <div class="about-me">
+            <h1>Агент Агентов</h1>
+            <small>Агент, Дизайнер, Програмист</small>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere inventore cumque accusantium fuga velit ea deserunt ipsam nesciunt hic reprehenderit obcaecati natus vitae, saepe maiores officia?</p>
+            <div class="links">
+                <p>Намерете ме в: </p>
+                <a href="https://www.facebook.com" class="social-link"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" class="social-link"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" class="social-link"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" class="social-link"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/KeyOD/itstep-ivo/" class="social-link"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="featured-projects" id="projects">
+        <h2>Последни проекти</h2>
         <div class="exercise" id="form">
             <div class="texts">
-                <h2>Форма за регистрация</h2>
-                <p>Създайте, хтмл форма за регистрации.</p>
+                <h3>Форма за регистрация</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quod necessitatibus laboriosam at ipsum ut id pariatur doloribus corporis quis.</p>
                 <br>
-                <a href="dr2/index.html" class="see-task button">Вижте задачата</a>
+                <div class="buttons-wrapper">
+                    <a href="dr2/index.html" class="see-task button">Вижте сайта</a>
+                    <a href="https://github.com/KeyOD/itstep-ivo/tree/main/dr2" class="see-task button" target="_blank">Вижте кода в github</a>
+                </div>
             </div>
             <img src="forma.jpg" alt="Форма за регистрация">
+            <hr>
         </div>
         <div class="exercise" id="table">
             <div class="texts">
-                <h2>Таблица с информация</h2>
-                <p>Една таблица, с каквато искате информация. Може да използвате интересни цветове и размери и т.н.</p>
+                <h3>Таблица с информация</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo alias ducimus illum tempora ipsam eum. Non ad autem reiciendis beatae.</p>
                 <br>
-                <a href="dr3/index.html" class="see-task button">Вижте задачата</a>
+                <div class="buttons-wrapper">
+                    <a href="dr3/index.html" class="see-task button">Вижте сайта</a>
+                    <a href="https://github.com/KeyOD/itstep-ivo/tree/main/dr3" class="see-task button" target="_blank">Вижте кода в github</a>
+                </div>
             </div>
             <img src="table.jpg" alt="Таблица с информация">
+            <hr>
         </div>
         <div class="exercise" id="masonary">
             <div class="texts">
-                <h2>Галерия тип Masonary</h2>
-                <p> Създайте masonry gallery с грид и снимки по ваш избор
-                    <br><br>
-                    Бонус задача : 
-                    Използвайте position and z-index  за да сложите текст в центъра на всяка снимка</p><br>
-                <a href="dr4/index.html" class="see-task button">Вижте задачата</a>
+                <h3>Галерия тип Masonary</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam culpa laudantium cupiditate labore quibusdam corporis minus illum soluta aliquid doloribus.</p>
+                <div class="buttons-wrapper">
+                    <a href="dr4/index.html" class="see-task button">Вижте сайта</a>
+                    <a href="https://github.com/KeyOD/itstep-ivo/tree/main/dr4" class="see-task button" target="_blank">Вижте кода в github</a>
+                </div>
             </div>
             <img src="masonary.jpg" alt="Галерия тип Masonary">
+            <hr>
         </div>
+    </div>
+    <div class="contact" id="contact-me">
+        <h2>Свържете се с мен</h2>
+        <form action="" method="POST">
+            <!-- <div class="label-wrapper"> -->
+                <label>
+                    <p>Име</p>
+                    <input type="text" id="name" placeholder="Иван Иванов" required>
+                </label>
+            <!-- </div> -->
+            <label>
+                <p>Имейл</p>
+                <input type="email" id="email" placeholder="iivanov@gmail.com" required>
+            </label>
+            <label>
+                <p>Съобщение</p>
+                <textarea name="message" placeholder="Пиша ви за..." required rows="8"></textarea>
+            </label>
+            <button type="submit" class="button">Изпрати</button>
+        </form>
     </div>
 </body>
 </html>
