@@ -14,3 +14,12 @@ function celsiusToFahrenheit(celsius) {
     return celsius * 9/5 + 32;
 }
 console.log('The temperature in Fahrenheit is '+celsiusToFahrenheit(30)); // Expected output: 86
+
+/* Task 3: Create a function to calculate the area of a rectangle
+Objective: To practice implementing a JavaScript function for computing the area of a rectangle.
+Define a JavaScript function named calculateRectangleArea that takes two parameters: 
+length (the length of the rectangle) and width (the width of the rectangle). */
+function calculateRectangleArea(length, width) {
+    return length * width;
+}
+console.log('The area of the rectangle is '+calculateRectangleArea(5, 10)); // Expected output: 50
