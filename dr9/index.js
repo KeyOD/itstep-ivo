@@ -9,4 +9,12 @@ function validateEmail(email) {
         return 'Email ' + email + ' does not contain "@" or a "." after the "@"';
     }
 }
-console.log(validateEmail('test@abv.bg')); // Expected output: true
+console.log(validateEmail('test@abv.bg'));
+
+/* 2.Greeting Message:
+Create a function that takes a person's name as input and returns a personalized greeting message, such as "Hello, [Name]!". */
+
+function greetingMessage(name) {
+    return 'Hello, ' + name + '!';
+}
+console.log(greetingMessage('Grigor'));
