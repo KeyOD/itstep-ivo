@@ -20,3 +20,10 @@ function calculateGrade(score) {
 }
 console.log(calculateGrade(85));
 console.log(calculateGrade(40));
+
+// Task for ternary operator: Write a program that determines if a given number is even or odd and prints the result accordingly.
+function evenOrOdd(number) {
+    return number % 2 === 0 ? 'Even' : 'Odd';
+}
+console.log(evenOrOdd(5));
+console.log(evenOrOdd(10));
