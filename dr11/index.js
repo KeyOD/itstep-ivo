@@ -30,3 +30,15 @@ function sumNumbers(numbers) {
     return sum;
 }
 console.log(sumNumbers(numbers))
+
+/* 3.Description: Write a program that iterates through an array of passwords and stops when the 
+correct password ("12345") is found. After the correct password is found, print a welcome message. */
+const passwords = ["password1", "password2", "12345", "password3"];
+function findPassword(passwords) {
+    for (let password of passwords) {
+        if (password === '12345') {
+            return 'Welcome!';
+        }
+    }
+}
+console.log(findPassword(passwords));
