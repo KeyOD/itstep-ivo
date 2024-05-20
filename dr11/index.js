@@ -15,3 +15,18 @@ function fizzBuzz() {
     }
 }
 fizzBuzz();
+
+/* 2.Description: Write a program that iterates through an array of numbers and adds them to a 
+total sum until a negative number is encountered. Finally, print the total sum of the entered numbers. */
+const numbers = [1, 2, 3, 4, 5, 6]; // Sample array with a negative number 
+function sumNumbers(numbers) {
+    let sum = 0;
+    for (let number of numbers) {
+        if (number < 0) {
+            break;
+        }
+        sum += number;
+    }
+    return sum;
+}
+console.log(sumNumbers(numbers))
