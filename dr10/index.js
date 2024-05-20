@@ -30,12 +30,16 @@ console.log(evenOrOdd(10));
 
 /* Task for switch-case: Write a program that takes a month number (1 for January, 2 for February, etc.) as input 
 and prints the number of days in that month. Consider leap years for February. */
-function daysInMonth(month) {
+function daysInMonth(month,year) {
     switch (month) {
         case 1:
             return 'January has 31 days';
         case 2:
-            return 'February has 28 days';
+            if(year % 100 === 0 ? year % 400 === 0 : year % 4 === 0){
+                return 'February has 29 days';
+            }else{
+                return 'February has 28 days';
+            }
         case 3:
             return 'March has 31 days';
         case 4:
@@ -60,5 +64,6 @@ function daysInMonth(month) {
             return 'Invalid month number';
     }
 }
-console.log(daysInMonth(2));
-console.log(daysInMonth(11));
+console.log(daysInMonth(2,2024));
+console.log(daysInMonth(2,2023));
+console.log(daysInMonth(11,2011));
