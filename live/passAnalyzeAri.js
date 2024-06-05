@@ -190,3 +190,28 @@ function calculateAri(bigSentence){
 
 // calculateAri('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus vitae voluptatem perferendis nulla quibusdam iusto reprehenderit aut quos similique minima?')
 // calculateAri('Lorem ipsum dolor sit, amet consectetur adipisicing elit')
+
+
+/* Write a function areAllPositive that accepts an array of numbers and 
+returns true if every number in the array is positive, and false otherwise. */
+
+function areAllPositive(arr){
+    return arr.every((el)=> el > 0)
+}
+// console.log(areAllPositive([1,2,3,4]))
+
+/* Write a function containsNegative that accepts an array of numbers and returns
+ true if there is at least one negative number in the array, and false otherwise. */
+
+function containsNegative(arr){
+    return arr.some((el)=>el < 0)
+}
+// console.log(containsNegative([-1,2,3,4]));
+
+/* Write a function filterNonPositive that accepts an array of numbers and returns a
+ new array containing only the non-positive numbers (i.e., numbers that are zero or negative) */
+
+function filterNonPositive(arr){
+    return arr.filter((el)=>el <= 0)
+}
+// console.log(filterNonPositive([-1,2,3,0,-4]));
