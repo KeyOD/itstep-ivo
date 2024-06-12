@@ -215,3 +215,56 @@ function filterNonPositive(arr){
     return arr.filter((el)=>el <= 0)
 }
 // console.log(filterNonPositive([-1,2,3,0,-4]));
+
+
+/* Task 1: Extracting Object Keys
+Description:Create a function that takes an object as an argument and returns an array of its keys.
+Instructions:
+- Define a function  that  to extract the keys of the object.
+- Return the array of keys. */
+
+let object = { name: 'Diana', age: 28, city: 'Miami' }
+console.log(object);
+function returnKeys(obj){
+    return Object.keys(obj)
+}
+// console.log(returnKeys(object));
+
+
+/* Task: 2
+Description:Create a function that takes an object as an argument and returns an array of its values.
+Instructions:
+Define a function  that  to extract the values of the object.
+Return the array of values. */
+
+function returnValues(obj){
+    return Object.values(obj)
+}
+// console.log(returnValues(object));
+
+
+/* Task 3: Description:Create a function that takes an object as an argument and returns an array of its key-value pairs as arrays.
+Instructions:
+ Define a function  that uses  to extract the key-value pairs of the object.
+ Return the array of key-value pairs. */
+
+function returnPairs(obj){
+    return Object.entries(obj)
+}
+// console.log(returnPairs(object));
+
+
+/* Bonus Task: Summarize Object Properties
+Description:Create a function that takes an object as an argument and returns a summary string that lists all its properties and values.
+Instructions:
+ Define a function to extract the key-value pairs of the object.
+ Construct and return a string that summarizes the object's properties and values. */
+
+function summarize(obj){
+    let string = ""
+    for (const [key,value] of Object.entries(obj)) {
+        string += `${key}: ${value}, `
+    }
+    return string.slice(0,-2)
+}
+// console.log(summarize(object));
