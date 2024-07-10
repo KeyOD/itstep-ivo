@@ -1,37 +1,57 @@
 const app = () => {
     document.addEventListener('click',(e)=>{
         if(e.target.classList.contains('addTaskButton')){
-            showTask(e)
+            e.preventDefault()
+            showTask()
+            // showPresetTasks(e)
         }
         if(e.target.classList.contains('complete')){
-            completeOrRemoveTask(e,'complete')
+            completeOrRemoveTask(e.target,'complete')
         } else if (e.target.classList.contains('remove')){
-            completeOrRemoveTask(e,'remove')
+            completeOrRemoveTask(e.target,'remove')
         }
     })
+
+    if(document.cookie){
+        let allCookies = document.cookie.split(';')
+        let cookiePairs = {}
+        for(cookie of allCookies){
+            let cook = cookie.split('=')
+            cookiePairs[cook[0].trim()] = cook[1].trim()
+        }
+        showTaskFromCookie(cookiePairs)
+    }
 }
 window.addEventListener('load', app)
 
-function showTask(e) {
+let paras = document.querySelectorAll('p')
+
+function showTaskFromCookie(pairs){
+    for([cookieName,cookieStatus] of Object.entries(pairs)){
+        console.log(cookieName,cookieStatus);
+        showTask(cookieName)
+        let text = document.querySelector('#'+cookieName).querySelector('p')
+        completeOrRemoveTask(text, cookieStatus)
+    }
+}
+
+
+function showPresetTasks(e) {
     let taskNum = e.target.dataset.task
     let li = document.createElement("li")
     let taskList = document.querySelector("#taskList")
     let btns = createBtns(taskNum)
     
     let taskName = document.createElement("h2")
-    let taskDesc = document.createElement("p")
     switch(taskNum){
         case "Task 1":
             taskName.innerText="Clean room"
-            taskDesc.innerText="Clean your room, because it's messy."
             break;
         case "Task 2":
             taskName.innerText="Reorder books"
-            taskDesc.innerText="Reorder your books to make them good to look at while they sit on the shelf."
             break;
         case "Task 3":
             taskName.innerText="Clean house"
-            taskDesc.innerText="You have waited too long to clean your house. Now is the time!"
             break;
         default:
             alert("wrong task number")
@@ -46,29 +66,29 @@ function showTask(e) {
     taskList.appendChild(li)
 }
 
-// function showTask(e) {
-//     e.preventDefault()
-//     let li = document.createElement("li")
-//     let btns = createBtns('task')
-//     let taskList = document.querySelector("#taskList")
-//     let textarea = document.querySelector('#textarea')
-//     if(textarea.value !== ''){
-//         let tasks = createTask('New Task',textarea.value)
-//         for (const task of tasks) {
-//             li.append(task)
-//         }
-//         li.append(btns)
-//         taskList.appendChild(li)
-//         textarea.value = ''
-//     }
-// }
+function showTask(text) {
+    let li = document.createElement("li")
+    let btns = createBtns('task')
+    let taskList = document.querySelector("#taskList")
+    let input = document.querySelector('#input')
+    let task = null
+    if(input.value !== ''){
+        task = createTask(input.value)
+        input.value = ''
+    } else {
+        task = createTask(text)
+    }
+    li.setAttribute('id',task.innerText)
+    li.append(task)
+    li.append(btns)
+    taskList.appendChild(li)
+    addToCookie(task,'uncompleted')
+}
 
-function createTask(name, description) {
-    let taskName = document.createElement("h2")
-    let taskDesc = document.createElement("p")
+function createTask(name) {
+    let taskName = document.createElement("p")
     taskName.innerText=name
-    taskDesc.innerText=description
-    return [taskName,taskDesc]
+    return taskName
 }
 
 function createBtns(taskNum){
@@ -90,11 +110,24 @@ function createBtns(taskNum){
     return btnWrapper
 }
 
-function completeOrRemoveTask(e,task){
-    let targetTask = e.target.closest('li')
+function completeOrRemoveTask(target,task){
+    let targetTask = target.closest('li')
     if(task === "complete"){
         targetTask.classList.add('completed')
+        addToCookie(targetTask.querySelector('p'),'complete')
     } else if(task == "remove"){
         targetTask.remove()
+        document.cookie = targetTask.querySelector('p').innerText+'=; Max-Age=0; path=/';
     }
+}
+
+function addToCookie(task,status){
+    setCookie(task.innerText,status)
+}
+
+function setCookie(name, value) {
+    let date = new Date();
+    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires + "; path=/";
 }
