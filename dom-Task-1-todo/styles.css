@@ -40,13 +40,17 @@ h1 {
   margin-bottom: 20px;
 }
 
-.addTaskButton {
+.addTaskButton,input {
   padding: 10px;
   border: none;
   background-color: #007bff;
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+
+input::placeholder {
+  color: rgb(255, 219, 219);
 }
 
 .addTaskButton:hover {
